@@ -1,0 +1,43 @@
+dsl_registry_empty	{}
+dsl_register_node	desc="Test node"|next="NextNode"|jobs=["TestJob"]|obs=true|exec=true
+dsl_get_pipeline_data_keys	["Node1", "Node2", "TestNode"]
+dsl_get_pipeline_data_node1	desc="Node1"|next="Node2"|jobs=[]|obs=false|exec=false
+dsl_clear_registry	true
+dsl_node_hook_keys	["TestPipe::EndNode", "TestPipe::StartNode"]
+dsl_node_hook_start	desc="Start processing"|next="EndNode"|jobs=["StartJob", "FinishJob"]|obs=false|exec=true
+dsl_get_pipeline_data_testpipe	["EndNode", "StartNode"]
+dsl_node_hook_observer	desc="Watch"|next=nil|jobs=[]|obs=true|exec=false
+dsl_node_hook_solo	desc="Solo"|next=nil|jobs=[]|obs=false|exec=false
+viz_node_attrs	TestNode|Test description|NextNode|TestModule|["TestJob"]
+viz_node_id	TestModule_TestNode
+viz_node_dims	200|104
+viz_node_dims_long_desc	780|84
+viz_node_dims_jobs	200|128
+viz_node_dims_nodesc	200|70
+viz_pipeline_init	TestPipeline|{}
+viz_pipeline_add_node	Node1|Description1
+viz_get_root_node	RootNode
+viz_get_root_node_fallback	A
+viz_layout_coords	RootNode:40:80|Node2:270:80
+viz_layout_sizes	RootNode:200:84|Node2:200:84
+viz_svg_markers	true,true,true,true,true,true,true
+viz_svg_status_markers	true,true,true,true,true
+viz_svg_edge_coords	x1="240" y1="122" x2="270" y2="122" class="edge"
+viz_svg_canvas_size	width="500" height="194"
+viz_get_title_running	P4 Pipeline
+viz_get_title_stopped	P4 Pipeline - не запущен
+viz_svg_known_color	true
+viz_svg_fallback_color	true
+viz_svg_desc_wrapping	["word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30"]
+collector_keys	["test_module"]
+collector_pipeline_class	PipelineVisualizer::Pipeline
+collector_nodes	["Node2", "RootNode"]
+collector_root_next	Node2|test_module
+collector_node2_jobs	["Job2"]
+collector_multi	["module1", "module2"]
+collector_priority_frequent	["rustat_custom", "rustat_priority_frequent"]
+collector_priority_frequent_name	Rustat::PriorityFrequent
+collector_custom_root	["my_app_custom_team"]
+collector_custom_root_display_name	MyApp::CustomTeam
+collector_chain_nodes	["RootNode", "MidNode", "EndNode"]
+collector_chain_svg	true

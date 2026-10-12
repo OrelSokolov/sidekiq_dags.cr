@@ -1,0 +1,17 @@
+name: sidekiq_dags_cr
+version: 0.1.0
+crystal: ">= 1.21.0"
+description: |
+  Порт sidekiq-dags (OrelSokolov) на Crystal — 1:1 API. DAG-пайплайны и
+  Sidekiq::Batch поверх Kiq: Node/NodeDsl DSL, PipelineStatus (Redis),
+  Pipeline/PipelineNode, PipelineCallback, PipelineTracking,
+  PipelineDslExtension (реестр метаданных нод) и PipelineVisualizer (SVG).
+
+authors:
+  - oleg
+
+dependencies:
+  kiq_cr:
+    path: ../../rails.cr/kiq.cr
+  # active_support_cr / active_job_cr / redis приходят транзитивно
+  # через kiq_cr.
