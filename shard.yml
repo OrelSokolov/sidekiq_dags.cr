@@ -12,6 +12,7 @@ authors:
 
 dependencies:
   kiq_cr:
-    path: ../../rails.cr/kiq.cr
+    github: OrelSokolov/kiq.cr
+    version: ~> 0.1.0
   # active_support_cr / active_job_cr / redis приходят транзитивно
   # через kiq_cr.
